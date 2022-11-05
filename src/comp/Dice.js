@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Dice() {
+function Dice(props) {
   return (
     <div className='dice'>
-        <h2 className='dice-num'>1</h2>
+        <h2 className='dice-num'>{props.randomNum}</h2>
     </div>
   );
 }
