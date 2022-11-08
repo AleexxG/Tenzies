@@ -9,22 +9,26 @@ body {
 
 body {
   background-color: var(--background-color);
-  margin: 0;
   background-color: #0B2434;
-  padding: 20px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 .app {
   background-color: var(--white-color);
   background-color: #F5F5F5;
-  height: 400px;
-  max-width: 800px;
+  height: 500px;
   border-radius: 5px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
 
 .title {
@@ -34,7 +38,9 @@ body {
 
 .instruction {
   font-weight: 400;
-  margin-top: 0;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -68,6 +74,7 @@ body {
   background-color: var(--button-color);
   color: var(--black-color);
   font-size: 1.2rem;
+  font-weight: 600;
   cursor: pointer;
 }
 

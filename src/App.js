@@ -34,13 +34,18 @@ function App() {
   }
 
   function rollDice() {
-    setDice(prev => prev.map(prevDie => {
-      return (
-        prevDie.isHeld ? 
-        prevDie :
-        generateNewDie()
-      );
-    }));
+    if (!win) {
+      setDice(prev => prev.map(prevDie => {
+        return (
+          prevDie.isHeld ? 
+          prevDie :
+          generateNewDie()
+        );
+      }));
+    } else {
+      setWin(false)
+      setDice(allNewDice())
+    };
   }
 
   function holdDice(id) {
@@ -74,7 +79,7 @@ function App() {
       <button 
         className='btn'
         onClick={rollDice}
-      >Roll</button>
+      >{win ? 'New game' : 'Roll'}</button>
     </div>
   );
 }
