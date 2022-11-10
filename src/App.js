@@ -51,7 +51,7 @@ function App() {
   function holdDice(id) {
     setDice(prev => prev.map(die => {
       return id === die.id ?
-      {...die, isHeld: !prev.isHeld} :
+      {...die, isHeld: !die.isHeld} :
       die
     }));
   }
