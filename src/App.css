@@ -63,10 +63,6 @@ body {
   cursor: pointer;
 }
 
-.dice-num {
-  font-size: 2rem;
-}
-
 .btn {
   height: 50px;
   width: 150px;
@@ -86,3 +82,37 @@ body {
 .btn:active {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: black;
+}
+.dice-num {
+  display: grid;
+  gap: 4px;
+  grid-template-areas: 
+    'a . b'
+    'c d e'
+    'f . g';
+}
+.dot:nth-child(2) {
+  grid-area: g;
+}
+.dot:nth-child(3) {
+  grid-area: b;
+}
+.dot:nth-child(4) {
+  grid-area: f;
+}
+.dot:nth-child(5) {
+  grid-area: c;
+}
+.dot:nth-child(6) {
+  grid-area: e;
+}
+.dot:nth-child(odd):last-child {
+  grid-area: d;
+}
+
