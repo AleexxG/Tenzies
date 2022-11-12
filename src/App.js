@@ -8,6 +8,7 @@ function App() {
   
   const [win, setWin] = React.useState(false);
   const [dice, setDice] = React.useState(allNewDice());
+  const [rollCount, setRollCount] = React.useState(0);
 
   React.useEffect(() => {
     const allHeld = dice.every(die => die.isHeld);
@@ -34,6 +35,7 @@ function App() {
   }
 
   function rollDice() {
+    setRollCount(prev => prev + 1);
     if (!win) {
       setDice(prev => prev.map(prevDie => {
         return (
@@ -43,8 +45,9 @@ function App() {
         );
       }));
     } else {
-      setWin(false)
-      setDice(allNewDice())
+      setWin(false);
+      setRollCount(0);
+      setDice(allNewDice());
     };
   }
 
@@ -52,7 +55,7 @@ function App() {
     setDice(prev => prev.map(die => {
       return id === die.id ?
       {...die, isHeld: !die.isHeld} :
-      die
+      die;
     }));
   }
 
@@ -70,6 +73,7 @@ function App() {
     <div className="app">
       <Text 
         win={win}
+        rollCount={rollCount}
       />
 
       <div className='allDice'>

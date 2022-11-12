@@ -2,7 +2,6 @@ body {
   --background-color: #018558;
   --button-color: #fef031;
   --details-color: #bde902;
-  --error-color: #d8323c;
   --black-color: #0c0e0c;
   --white-color: #eaebea;
 }
@@ -43,6 +42,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+.roll-count {
+  margin-top: 5.2rem;
 }
 
 .allDice {
