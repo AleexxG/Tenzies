@@ -4,10 +4,10 @@ function Text(props) {
 
   let heading
     if (!props.win && props.rollCount === 0) {
-      heading = 'Tenzies'
+      heading = 'Tenzies';
     } else if (props.win) {
-      heading = 'You Won'
-    }
+      heading = 'You Won';
+    };
 
   let instruction = !props.win && props.rollCount === 0 ? 'Roll until all dice are the same. Click each die to freeze it at its current value between rolls.' : '';
 
